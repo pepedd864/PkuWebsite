@@ -16,10 +16,12 @@ $(function () {
     if (scroll_delta > 0) {
       dock.css({ "height": 0 });
     }
-    else {
+    else if (current_scroll_top != 0) {
       dock.css({ "height": 45 });
     }
+    if (current_scroll_top == 0) {
 
+    }
     if (current_scroll_top < 750) {
       sc02Items.find(".item:odd").css({
         "opacity": 0,
