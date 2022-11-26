@@ -1,0 +1,106 @@
+:root {
+  /*全局属性*/
+  --font_size: 14px;
+  --font_family: 微软雅黑, 黑体;
+  --block_width: 1400px;
+  --min_screen_width: 1650px;
+}
+@font-face {
+  font-family: impact;
+  src: url("../fonts/impact.eot");
+  src: url("../fonts/impact-1.eot") format("embedded-opentype"), url("../fonts/impact.woff") format("woff"), url("../fonts/impact.ttf") format("truetype"), url("../fonts/impact.svg") format("svg");
+}
+@font-face {
+  font-family: icon;
+  src: url("../fonts/iconfont.eot");
+  src: url("../fonts/iconfont-1.eot") format("embedded-opentype"), url("../fonts/iconfont.woff") format("woff"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.svg") format("svg");
+}
+* {
+  padding: 0;
+  margin: 0;
+  color: #000;
+  text-decoration: none;
+  font: var(--font_size) var(--font_family);
+  font-style: normal;
+}
+html {
+  min-width: var(--min_screen_width);
+}
+.block {
+  width: var(--block_width);
+  margin: auto;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+.more {
+  color: #94070a;
+  display: inline-block;
+  line-height: 45px;
+}
+.more:hover i::before {
+  opacity: 1;
+}
+.more i {
+  float: left;
+  background: url(../images/btn/more1.svg) center center no-repeat;
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-size: contain;
+}
+.more i:before {
+  content: "";
+  background: url(../images/btn/more1a.svg) center center no-repeat;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.2s ease-out 0s;
+  display: block;
+  background-size: contain;
+}
+.title {
+  text-align: center;
+}
+.floatBar {
+  position: fixed;
+  top: 50%;
+  margin-top: -85px;
+  right: 0;
+  width: 82px;
+  height: 170px;
+  color: #fff;
+  background: #94070a;
+  background: url(../images/float/bg.png) center center no-repeat;
+  transform: scale(1);
+  transform-origin: right center;
+  cursor: pointer;
+  z-index: 2;
+}
+.floatBar::before {
+  content: "";
+  background: url(../images/float/bai.png) center center no-repeat;
+  width: 97px;
+  height: 91px;
+  position: absolute;
+  left: -20px;
+  top: 10px;
+}
+.floatBar::after {
+  content: "";
+  background: url(../images/float/gan.png) center center no-repeat;
+  width: 78px;
+  height: 88px;
+  position: absolute;
+  left: 15px;
+  top: 80px;
+}
+.floatBar i {
+  width: 36px;
+  height: 100%;
+  display: block;
+  margin-left: 40px;
+  position: relative;
+  background: url(../images/float/title.png) center center no-repeat;
+  z-index: 3;
+}
