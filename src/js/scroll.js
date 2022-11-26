@@ -131,6 +131,6 @@ $(function () {
         "transform": "none"
       })
     }
-    console.log(current_scroll_top);
+    // console.log(current_scroll_top);
   });
 })

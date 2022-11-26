@@ -933,6 +933,7 @@
   font-family: "icon" !important;
   font-style: normal;
   color: #94070a !important;
+  cursor: pointer;
 }
 .body_b .footer .bar1 .share .icon-wchat::after {
   content: "\e603";
