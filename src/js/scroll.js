@@ -1,18 +1,16 @@
 $(function () {
   //处理滚动事件
   let old_scroll_top = 0;
+  let dock = $(".dock1");
+  let sc02Items = $(".section02 .block .list");
+  let sc03Items = $(".section03 .block .part2");
+  let sc04Items = $(".section04 .block ");
+  let sc05Items = $(".section05 .block");
+  let sc06Items = $(".section06 .block .list");
   $(document).scroll(function () {
     let current_scroll_top = $(document).scrollTop();
     let scroll_delta = current_scroll_top - old_scroll_top;
     old_scroll_top = current_scroll_top;
-
-    let dock = $(".dock1");
-    let sc02Items = $(".section02 .block .list");
-    let sc03Items = $(".section03 .block .part2");
-    let sc04Items = $(".section04 .block ");
-    let sc05Items = $(".section05 .block");
-    let sc06Items = $(".section06 .block .list");
-
     if (scroll_delta > 0) {
       dock.css({ "height": 0 });
     }
