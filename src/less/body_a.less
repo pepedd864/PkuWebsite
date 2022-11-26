@@ -1,5 +1,6 @@
 :root {
 	--color: #fff;
+	--theme-color: #94070a;
 }
 /* .swiper{
   position: relative;
@@ -15,6 +16,7 @@
 .body_a {
 	position: relative;
 	width: 100%;
+	background-color: var(--theme-color);
 	// z-index: -1;
 	.header {
 		//上方导航栏
@@ -228,7 +230,7 @@
 		.slide-img {
 			position: relative;
 			width: auto;
-			height: 95vh;
+			height: 96vh;
 			background: url(../images/swiper/bg02.jpg) center center no-repeat;
 			background-size: cover;
 		}
@@ -238,11 +240,54 @@
 			width: 100%;
 			height: 10vh;
 			background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
-			.slide-txt{
+			.slide-txt {
 				padding-left: 40px;
 				font-size: 30px;
 				line-height: 1.3;
 				color: var(--color);
+				transition: all 0.5s ease-out 0s;
+			}
+			.slide-tools {
+				position: absolute;
+				right: 100px;
+				bottom: 50px;
+				text-align: center;
+				.slide-dots {
+					display: block;
+					.slide-dot {
+						display: inline-block;
+						margin: 0 10px;
+						font-size: 18px;
+						color: #fff;
+						font-family: Arial;
+						vertical-align: middle;
+						cursor: pointer;
+						&::after {
+							content: "";
+							border-top: 1px solid #fff;
+							display: inline-block;
+							vertical-align: middle;
+							width: 0px;
+							margin-left: 5px;
+							transition: all 0.5s ease-out 0s;
+						}
+						&:first-child::after {
+							width: 60px;
+						}
+						&:last-child {
+							font-size: 24px;
+							line-height: 1;
+							width: 80px;
+							text-align: center;
+							&::after {
+								content: "\e76c";
+								display: inline-block;
+								vertical-align: middle;
+								font-family: icon;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

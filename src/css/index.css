@@ -20,6 +20,7 @@
   margin: 0;
   color: #000;
   text-decoration: none;
+  list-style: none;
   font: var(--font_size) var(--font_family);
   font-style: normal;
 }
