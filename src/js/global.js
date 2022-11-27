@@ -1,16 +1,24 @@
 $(function () {
+    //禁用文字选中
+    document.addEventListener('selectstart', function (e) {
+        e.preventDefault();
+    })
     //配置slick
     const slide = $(".slide-group").slick({
         accessibility: false,
         autoplay: true,
-        autoplaySpeed: 500,
+        autoplaySpeed: 50000,
         arrows: false,
     });
-    $(".slide-dots .slide-dot:last").click(function () {
+    $(".slide-dots .slide-next").click(function () {
         $(".slide-group").slick("slickNext")
     })
     $(".slide-group").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
         $(".slide-dot").eq(nextSlide).addClass("active").siblings().removeClass("active");
+    })
+    $(".slide-dot").click(function () {
+        let index = $('.slide-dot').index(this);
+        $(".slide-group").slick("slickGoTo", index);
     })
     //设置子选项的悬浮位置
     let sto_nav;

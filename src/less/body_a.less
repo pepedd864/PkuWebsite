@@ -263,14 +263,17 @@
 					text-align: center;
 					.slide-dots {
 						display: block;
+						.slide-next,
 						.slide-dot {
 							display: inline-block;
 							margin: 0 10px;
-							font-size: 15px;
 							color: #fff;
-							font-family: Arial;
 							vertical-align: middle;
 							cursor: pointer;
+						}
+						.slide-dot {
+							font: 15px Arial;
+							transition: all 0.5s ease-out 0s;
 							&::after {
 								content: "";
 								border-top: 1px solid #fff;
@@ -280,21 +283,21 @@
 								margin-left: 5px;
 								transition: all 0.5s ease-out 0s;
 							}
-							&:last-child {
-								font-size: 24px;
-								line-height: 1;
-								width: 80px;
-								text-align: center;
-								&::after {
-									content: "\e76c";
-									display: inline-block;
-									vertical-align: middle;
-									font-family: icon;
-								}
+						}
+						.slide-next{
+							font-size: 24px;
+							line-height: 1;
+							width: 80px;
+							text-align: center;
+							&::after {
+								content: "\e76c";
+								display: inline-block;
+								vertical-align: middle;
+								font-family: icon;
 							}
 						}
 						.active {
-							font-size: 18px;
+							font-size: 20px;
 							&::after {
 								width: 60px;
 							}
