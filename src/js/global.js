@@ -20,7 +20,7 @@ $(function () {
         let index = $('.slide-dot').index(this);
         $(".slide-group").slick("slickGoTo", index);
     })
-    //设置子选项的悬浮位置
+    //设置二级菜单的悬浮位置
     let sto_nav;
     $(".nav_main a").hover(
         function () {
