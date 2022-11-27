@@ -9,6 +9,7 @@
 		top: 0;
 		width: 100%;
 		background-color: var(--theme-color);
+		visibility: visible;
 		z-index: 9999;
 		transition: opacity 1.2s;
 		.dock1 {
@@ -265,7 +266,7 @@
 						.slide-dot {
 							display: inline-block;
 							margin: 0 10px;
-							font-size: 18px;
+							font-size: 15px;
 							color: #fff;
 							font-family: Arial;
 							vertical-align: middle;
@@ -279,9 +280,6 @@
 								margin-left: 5px;
 								transition: all 0.5s ease-out 0s;
 							}
-							&:first-child::after {
-								width: 60px;
-							}
 							&:last-child {
 								font-size: 24px;
 								line-height: 1;
@@ -293,6 +291,12 @@
 									vertical-align: middle;
 									font-family: icon;
 								}
+							}
+						}
+						.active {
+							font-size: 18px;
+							&::after {
+								width: 60px;
 							}
 						}
 					}

@@ -1,12 +1,16 @@
 $(function () {
+    //配置slick
     const slide = $(".slide-group").slick({
-        accessibility:false,
-        autoplay:true,
-        autoplaySpeed:5000,
-        arrows:false,
+        accessibility: false,
+        autoplay: true,
+        autoplaySpeed: 500,
+        arrows: false,
     });
-    $(".slide-dots .slide-dot:last").click(function(){
-        // $(".slide-group").slickNext();
+    $(".slide-dots .slide-dot:last").click(function () {
+        $(".slide-group").slick("slickNext")
+    })
+    $(".slide-group").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+        $(".slide-dot").eq(nextSlide).addClass("active").siblings().removeClass("active");
     })
     //设置子选项的悬浮位置
     let sto_nav;
