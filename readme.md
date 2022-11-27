@@ -20,3 +20,13 @@ npm i webpack webpack-cli webpack-dev-server html-webpack-plugin css-loader  les
 "dev": "webpack serve --config ./config/webpack.dev.js",
 "build": "webpack --config ./config/webpack.prod.js"
 ```
+4. 运行项目
+
+```
+npm run dev
+```
+5. 打包项目
+
+```
+npm run build
+```

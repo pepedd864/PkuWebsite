@@ -7,54 +7,66 @@
 		<title>pku-website</title>
 		<!-- 导入jQuery -->
 		<script src="https://cdn.staticfile.org/jquery/3.6.1/jquery.min.js"></script>
-		<!-- <script src="../src/js/jQuery.min.js"></script> -->
+		<!-- 导入slick -->
+		<script
+			type="text/javascript"
+			src="https://cdn.staticfile.org/slick-carousel/1.8.1/slick.js"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.staticfile.org/slick-carousel/1.8.1/slick.css"
+		/>
 	</head>
 	<body>
 		<div class="body_a">
 			<div class="header">
 				<div class="dock1">
-					<div class="navbar">
-						<div class="nav_l">
-							<a href="#">学生</a>
-							<i>|</i>
-							<a href="#">教职工</a>
-							<i>|</i>
-							<a href="#">校友</a>
-							<i>|</i>
-							<a href="#">访客</a>
-							<i>|</i>
-							<a href="#">招聘</a>
-							<i>|</i>
-							<a href="#">捐赠</a>
-						</div>
-						<div class="nav_r">
-							<a href="#">门户</a>
-							<a href="#">网络</a>
-							<a href="#">邮箱</a>
-							<a href="#">燕云直播</a>
-							<a href="#">图书馆</a>
-							<a href="#">医学部</a>
-							<a href="#">领导信箱</a>
+					<div class="inner">
+						<div class="navbar">
+							<div class="nav_l">
+								<a href="#">学生</a>
+								<i>|</i>
+								<a href="#">教职工</a>
+								<i>|</i>
+								<a href="#">校友</a>
+								<i>|</i>
+								<a href="#">访客</a>
+								<i>|</i>
+								<a href="#">招聘</a>
+								<i>|</i>
+								<a href="#">捐赠</a>
+							</div>
+							<div class="nav_r">
+								<a href="#">门户</a>
+								<a href="#">网络</a>
+								<a href="#">邮箱</a>
+								<a href="#">燕云直播</a>
+								<a href="#">图书馆</a>
+								<a href="#">医学部</a>
+								<a href="#">领导信箱</a>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="dock2">
 					<div class="navbar">
-						<div class="logo">
-							<img src="../src/images/logo_a.png" alt="" />
-						</div>
-						<div class="nav_main">
-							<a href="#">北大概况</a>
-							<a href="#">招生</a>
-							<a href="#">学部与院系</a>
-							<a href="#">教育教学</a>
-							<a href="#">科学研究</a>
-							<a href="#">合作交流</a>
-							<a href="#">校园生活</a>
-						</div>
-						<div class="tools">
-							<div class="search"></div>
-							<div class="lang">EN</div>
+						<div class="inner">
+							<div class="logo">
+								<img src="../src/images/logo_a.png" alt="" />
+							</div>
+							<div class="nav_main">
+								<a href="#">北大概况</a>
+								<a href="#">招生</a>
+								<a href="#">学部与院系</a>
+								<a href="#">教育教学</a>
+								<a href="#">科学研究</a>
+								<a href="#">合作交流</a>
+								<a href="#">校园生活</a>
+							</div>
+							<div class="tools">
+								<div class="search"></div>
+								<div class="lang">EN</div>
+							</div>
 						</div>
 						<div class="nav_child">
 							<div class="item">
@@ -209,68 +221,104 @@
 				</div>
 			</div>
 			<div class="slide-banner">
-				<div class="slide-img"></div>
-				<div class="slide-bottom">
-					<div class="slide-txt">请师生员工严格落实防疫要求，配合相关措施，树牢必胜信心！</div>
-					<div class="slide-tools">
-						<ul class="slide-dots">
-							<li class="slide-dot">1</li>
-							<li class="slide-dot">2</li>
-							<li class="slide-dot">3</li>
-							<li class="slide-dot">4</li>
-							<li class="slide-dot">5</li>
-							<li class="slide-dot">6</li>
-							<li class="slide-dot"></li>
-						</ul>
+				<div class="slide">
+					<div class="slide-group">
+						<div class="slide-item">
+							<img src="../src/images/slick/bg01.jpg" alt="" />
+							<div class="slide-txt">第二届“北京大学·国家大剧院艺术周”举行</div>
+						</div>
+						<div class="slide-item">
+							<img src="../src/images/slick/bg02.jpg" alt="" />
+							<div class="slide-txt">
+								请师生员工严格落实防疫要求，配合相关措施，树牢必胜信心！
+							</div>
+						</div>
+						<div class="slide-item">
+							<img src="../src/images/slick/bg03.jpg" alt="" />
+							<div class="slide-txt">
+								“同世界·共梦想·和未来”——北京大学第十九届国际文化节举行
+							</div>
+						</div>
+						<div class="slide-item">
+							<img src="../src/images/slick/bg04.jpg" alt="" />
+							<div class="slide-txt">
+								多模态跨尺度生物医学成像设施工程竣工仪式举行
+							</div>
+						</div>
+						<div class="slide-item">
+							<img src="../src/images/slick/bg05.jpg" alt="" />
+							<div class="slide-txt">白云漫卷万里晴　斜阳暖意覆草茵</div>
+						</div>
+						<div class="slide-item">
+							<img src="../src/images/slick/bg06.jpg" alt="" />
+							<div class="slide-txt">湖畔灯火欲黄昏　秋树玉簪落波纹</div>
+						</div>
+					</div>
+					<div class="slide-bottom">
+						<div class="slide-tools">
+							<ul class="slide-dots">
+								<li class="slide-dot">1</li>
+								<li class="slide-dot">2</li>
+								<li class="slide-dot">3</li>
+								<li class="slide-dot">4</li>
+								<li class="slide-dot">5</li>
+								<li class="slide-dot">6</li>
+								<li class="slide-dot"></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="body_b">
-			<!-- <div class="header">
+			<div class="header">
 				<div class="dock1">
-					<div class="navbar">
-						<div class="nav_l">
-							<a href="#">学生</a>
-							<i>|</i>
-							<a href="#">教职工</a>
-							<i>|</i>
-							<a href="#">校友</a>
-							<i>|</i>
-							<a href="#">访客</a>
-							<i>|</i>
-							<a href="#">招聘</a>
-							<i>|</i>
-							<a href="#">捐赠</a>
-						</div>
-						<div class="nav_r">
-							<a href="#">门户</a>
-							<a href="#">网络</a>
-							<a href="#">邮箱</a>
-							<a href="#">燕云直播</a>
-							<a href="#">图书馆</a>
-							<a href="#">医学部</a>
-							<a href="#">领导信箱</a>
+					<div class="inner">
+						<div class="navbar">
+							<div class="nav_l">
+								<a href="#">学生</a>
+								<i>|</i>
+								<a href="#">教职工</a>
+								<i>|</i>
+								<a href="#">校友</a>
+								<i>|</i>
+								<a href="#">访客</a>
+								<i>|</i>
+								<a href="#">招聘</a>
+								<i>|</i>
+								<a href="#">捐赠</a>
+							</div>
+							<div class="nav_r">
+								<a href="#">门户</a>
+								<a href="#">网络</a>
+								<a href="#">邮箱</a>
+								<a href="#">燕云直播</a>
+								<a href="#">图书馆</a>
+								<a href="#">医学部</a>
+								<a href="#">领导信箱</a>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="dock2">
 					<div class="navbar">
-						<div class="logo">
-							<img src="../src/images/logo_b.png" alt="" />
-						</div>
-						<div class="nav_main">
-							<a href="#">北大概况</a>
-							<a href="#">招生</a>
-							<a href="#">学部与院系</a>
-							<a href="#">教育教学</a>
-							<a href="#">科学研究</a>
-							<a href="#">合作交流</a>
-							<a href="#">校园生活</a>
-						</div>
-						<div class="tools">
-							<div class="search"></div>
-							<div class="lang">EN</div>
+						<div class="inner">
+							<div class="logo">
+								<img src="../src/images/logo_b.png" alt="" />
+							</div>
+							<div class="nav_main">
+								<a href="#">北大概况</a>
+								<a href="#">招生</a>
+								<a href="#">学部与院系</a>
+								<a href="#">教育教学</a>
+								<a href="#">科学研究</a>
+								<a href="#">合作交流</a>
+								<a href="#">校园生活</a>
+							</div>
+							<div class="tools">
+								<div class="search"></div>
+								<div class="lang">EN</div>
+							</div>
 						</div>
 						<div class="nav_child">
 							<div class="item">
@@ -423,7 +471,7 @@
 						</div>
 					</div>
 				</div>
-			</div> -->
+			</div>
 			<div class="section01">
 				<div class="block">
 					<div class="title">北大 · 要闻</div>

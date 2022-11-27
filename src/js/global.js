@@ -1,4 +1,13 @@
 $(function () {
+    const slide = $(".slide-group").slick({
+        accessibility:false,
+        autoplay:true,
+        autoplaySpeed:5000,
+        arrows:false,
+    });
+    $(".slide-dots .slide-dot:last").click(function(){
+        // $(".slide-group").slickNext();
+    })
     //设置子选项的悬浮位置
     let sto_nav;
     $(".nav_main a").hover(

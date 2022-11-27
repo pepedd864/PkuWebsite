@@ -1,13 +1,19 @@
+/*全局属性*/
 :root {
-	/*全局属性*/
-
 	//字体设置
 	--font_size: 14px;
 	--font_family: 微软雅黑, 黑体;
 	//组件宽度
 	--block_width: 1400px;
+	//任务栏宽度
+	--dock_width: 1400px;
 	//限制屏幕宽度(设计稿宽度)
 	--min_screen_width: 1650px;
+	//字体色
+	--color_a: #fff;
+	--color_b: #000;
+	//主题色
+	--theme-color: #94070a;
 }
 //北大官网矢量字体文件
 @font-face {
@@ -26,6 +32,7 @@
 		url("../fonts/iconfont.ttf") format("truetype"),
 		url("../fonts/iconfont.svg") format("svg");
 }
+// 初始化CSS
 * {
 	padding: 0;
 	margin: 0;
@@ -38,9 +45,6 @@
 html {
 	min-width: var(--min_screen_width);
 }
-body {
-	// background-color: pink;
-}
 .block {
 	width: var(--block_width);
 	margin: auto;
@@ -48,7 +52,7 @@ body {
 	box-sizing: border-box;
 }
 .more {
-	color: #94070a;
+	color: var(--theme-color);
 	display: inline-block;
 	line-height: 45px;
 	&:hover {
@@ -88,7 +92,7 @@ body {
 	width: 82px;
 	height: 170px;
 	color: #fff;
-	background: #94070a;
+	background: var(--theme-color);
 	background: url(../images/float/bg.png) center center no-repeat;
 	transform: scale(1);
 	transform-origin: right center;

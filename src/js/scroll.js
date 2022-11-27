@@ -1,7 +1,6 @@
 $(function () {
-  //处理滚动事件
   let old_scroll_top = 0;
-  let dock = $(".dock1");
+  let dock = $(".body_b .dock1");
   let sc02Items = $(".section02 .block .list");
   let sc03Items = $(".section03 .block .part2");
   let sc04Items = $(".section04 .block ");
@@ -17,8 +16,32 @@ $(function () {
     else if (current_scroll_top != 0) {
       dock.css({ "height": 45 });
     }
-    if (current_scroll_top == 0) {
-
+    if (current_scroll_top >= 0 && current_scroll_top <= 20 && scroll_delta > 0) {
+      $(".body_b").css({
+        "top": 0,
+        "z-index": 999
+      })
+      $(".body_a .header").css({
+        "opacity": 0,
+        "visibility": "hidden"
+      })
+      $(".body_b .header").css({
+        "opacity": 1,
+        "visibility": "visible"
+      })
+    }
+    if (current_scroll_top >= 0 && current_scroll_top <= 20 && scroll_delta < 0) {
+      $(".body_b").css({
+        "top": "100vh"
+      })
+      $(".body_a .header").css({
+        "opacity": 1,
+        "visibility": "visible"
+      })
+      $(".body_b .header").css({
+        "opacity": 0,
+        "visibility": "hidden"
+      })
     }
     if (current_scroll_top < 750) {
       sc02Items.find(".item:odd").css({
