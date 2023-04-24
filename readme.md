@@ -1,8 +1,11 @@
-<h1 align="center">高校网站模仿</h1>
+<h1 align="center">北京大学首页模仿</h1>
+
+## 项目介绍
 - 此项目选取北京大学官网首页进行模仿
 - 项目在完成度上完成了网站的大部分功能(响应式布局部分未完成，部分轮播图未完成，主页轮播图使用`slick.js`触摸轮播图插件)
 - 项目使用`webpack 5`进行项目开发，打包，代码部分则是基本的`HTML`和`CSS`代码，并有少量js代码(`jQuery`库)作为网站部分动效的实现
 ![](https://raw.githubusercontent.com/pepedd864/cdn-repos/main/img/67ca64e7c090b7467cf74d13af90b90d.gif)
+
 ## 调试代码
 - 初次调试本项目，可以直接使用dist目录下打包好的文件预览
 - 也可以简单配置`node`环境后使用
