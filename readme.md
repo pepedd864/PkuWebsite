@@ -4,6 +4,9 @@
 - 此项目选取北京大学官网首页进行模仿
 - 项目在完成度上完成了网站的大部分功能(响应式布局部分未完成，部分轮播图未完成，主页轮播图使用`slick.js`触摸轮播图插件)
 - 项目使用`webpack 5`进行项目开发，打包，代码部分则是基本的`HTML`和`CSS`代码，并有少量js代码(`jQuery`库)作为网站部分动效的实现
+
+## 在线体验网址
+https://salmon-mud-009a26700.3.azurestaticapps.net/
 ![](https://raw.githubusercontent.com/pepedd864/cdn-repos/main/img/67ca64e7c090b7467cf74d13af90b90d.gif)
 
 ## 调试代码
