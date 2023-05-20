@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <h1 class="">pku-website</h1>
+    <page-top/>
   </div>
 </template>
 
 <script setup>
-</script>
+import PageTop from "@/views/PageTop/PageTop.vue";</script>
 
-<style>
+<style lang="scss" scoped>
+#app {
+}
 </style>
