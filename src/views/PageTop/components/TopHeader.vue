@@ -371,19 +371,21 @@ onMounted(() => {
       </div>
     </div>
     <div class="nav-mobile">
-      <div class="logo">
-        <img :src="logoSrc" alt=""/>
-      </div>
-      <div class="tools">
-        <div class="search"></div>
-        <div class="lang">EN</div>
-        <div class="menu">
-          <i></i>
-          <i></i>
-          <i></i>
+      <div class="top">
+        <div class="logo">
+          <img :src="logoSrc" alt=""/>
+        </div>
+        <div class="tools">
+          <div class="search"></div>
+          <div class="lang">EN</div>
+          <button class="menu">
+            <i></i>
+            <i></i>
+            <i></i>
+          </button>
+          <span class="close"></span>
         </div>
       </div>
-      <span class="close"></span>
       <div class="nav_main"></div>
       <div class="nav_l"></div>
       <div class="nav_r"></div>
@@ -547,54 +549,69 @@ onMounted(() => {
   }
 
   .nav-mobile {
-    @apply flex items-start justify-between w-[100vw] h-[100vh] bg-black bg-opacity-30;
-    .logo {
-      @apply w-[110px];
-      img {
-        @apply w-auto h-full object-contain;
+    @apply w-[100vw] h-[100vh] bg-black bg-opacity-30;
+    @apply lg:hidden;
+    &:focus-within .nav_main {
+      @apply block;
+    }
+
+    .top {
+      @apply flex items-start justify-between;
+      .logo {
+        @apply w-[110px];
+        img {
+          @apply w-auto h-full object-contain;
+        }
+      }
+
+      .tools {
+        @apply flex justify-between items-center w-[65px];
+        .search {
+          border: 1px #fff solid;
+          @apply w-[30px] h-[30px] leading-[30px] text-[15px] text-center text-white rounded-full cursor-pointer;
+          &::before,
+          &::after {
+            @apply absolute content-[""];
+          }
+
+          &:before {
+            border: 2px #fff solid;
+            transform: translate(-57%, 33%);
+            @apply w-[16px] h-[16px] rounded-full;
+          }
+
+          &::after {
+            transform: translate(6px, 18px) rotateZ(-45deg);
+            @apply w-[2px] h-[5px] bg-white rounded-[2px];
+          }
+        }
+
+        .menu {
+          @apply flex flex-col justify-around w-[30px] h-[30px] leading-[8px] text-[15px] align-top cursor-pointer;
+          i {
+            @apply inline-block self-center h-[2px] w-[26px] bg-white;
+          }
+
+          &:focus {
+            @apply bg-black;
+          }
+
+        }
+
+        .close {
+          @apply hidden;
+        }
+
+        .lang {
+          @apply hidden;
+        }
+
       }
     }
 
-    .tools {
-      @apply flex justify-between items-center w-[65px];
-      .search {
-        border: 1px #fff solid;
-        @apply w-[30px] h-[30px] leading-[30px] text-[15px] text-center text-white rounded-full cursor-pointer;
-        &::before,
-        &::after {
-          @apply absolute content-[""];
-        }
-
-        &:before {
-          border: 2px #fff solid;
-          transform: translate(-57%, 33%);
-          @apply w-[16px] h-[16px] rounded-full;
-        }
-
-        &::after {
-          transform: translate(6px, 18px) rotateZ(-45deg);
-          @apply w-[2px] h-[5px] bg-white rounded-[2px];
-        }
-      }
-
-      .menu {
-        @apply flex flex-col justify-around w-[30px] h-[30px] leading-[8px] text-[15px] align-top cursor-pointer;
-        i {
-          @apply inline-block self-center h-[2px] w-[26px] bg-white;
-        }
-      }
-
-      .lang {
-        @apply hidden;
-      }
-    }
-
-    .close {
-      @apply hidden;
-    }
 
     .nav_main {
-      @apply hidden;
+      @apply hidden bg-white w-full h-[300px];
     }
 
     .nav_l {
