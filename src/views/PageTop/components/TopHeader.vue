@@ -1,81 +1,3 @@
-<template>
-  <div class="top-header">
-    <div class="nav-normal">
-      <div class="dock1">
-        <div class="inner">
-          <div class="navbar">
-            <div class="nav_l">
-              <a href="#">学生</a>
-              <i>|</i>
-              <a href="#">教职工</a>
-              <i>|</i>
-              <a href="#">校友</a>
-              <i>|</i>
-              <a href="#">访客</a>
-              <i>|</i>
-              <a href="#">招聘</a>
-              <i>|</i>
-              <a href="#">捐赠</a>
-            </div>
-            <div class="nav_r">
-              <a href="#">门户</a>
-              <a href="#">网络</a>
-              <a href="#">邮箱</a>
-              <a href="#">燕云直播</a>
-              <a href="#">图书馆</a>
-              <a href="#">医学部</a>
-              <a href="#">领导信箱</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="dock2">
-        <div class="navbar">
-          <div class="inner">
-            <div class="logo">
-              <img :src="logoSrc" alt=""/>
-            </div>
-            <div class="nav_main">
-              <a v-for="(item,index) in navMainList" :href="item.url" :key="index">{{ item.name }}</a>
-            </div>
-            <div class="tools">
-              <div class="search"></div>
-              <div class="lang">EN</div>
-            </div>
-          </div>
-          <div class="nav_child">
-            <div v-for="item in navChildList" class="item" :key="item">
-              <div class="nav_child_left">
-                <div class="pic">
-                  <img :src="item.img" alt=""/>
-                </div>
-                <div class="txt" v-html="item.txt">
-                </div>
-              </div>
-              <div class="nav_child_right">
-                <a v-for="i in item.right" :href="i.url" :key="i">{{ i.name }}</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="nav-mobile">
-      <div class="logo">
-        <img :src="logoSrc" alt=""/>
-      </div>
-      <div class="tools">
-        <div class="search"></div>
-        <div class="lang">EN</div>
-      </div>
-      <span class="close"></span>
-      <div class="nav_main"></div>
-      <div class="nav_l"></div>
-      <div class="nav_r"></div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import {onMounted, ref} from "vue";
 
@@ -386,18 +308,99 @@ onMounted(() => {
   );
 })
 </script>
-
+<template>
+  <div class="top-header">
+    <div class="nav-normal">
+      <div class="dock1">
+        <div class="inner">
+          <div class="navbar">
+            <div class="nav_l">
+              <a href="#">学生</a>
+              <i>|</i>
+              <a href="#">教职工</a>
+              <i>|</i>
+              <a href="#">校友</a>
+              <i>|</i>
+              <a href="#">访客</a>
+              <i>|</i>
+              <a href="#">招聘</a>
+              <i>|</i>
+              <a href="#">捐赠</a>
+            </div>
+            <div class="nav_r">
+              <a href="#">门户</a>
+              <a href="#">网络</a>
+              <a href="#">邮箱</a>
+              <a href="#">燕云直播</a>
+              <a href="#">图书馆</a>
+              <a href="#">医学部</a>
+              <a href="#">领导信箱</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dock2">
+        <div class="navbar">
+          <div class="inner">
+            <div class="logo">
+              <img :src="logoSrc" alt=""/>
+            </div>
+            <div class="nav_main">
+              <a v-for="(item,index) in navMainList" :href="item.url" :key="index">{{ item.name }}</a>
+            </div>
+            <div class="tools">
+              <div class="search"></div>
+              <div class="lang">EN</div>
+            </div>
+          </div>
+          <div class="nav_child">
+            <div v-for="item in navChildList" class="item" :key="item">
+              <div class="nav_child_left">
+                <div class="pic">
+                  <img :src="item.img" alt=""/>
+                </div>
+                <div class="txt" v-html="item.txt">
+                </div>
+              </div>
+              <div class="nav_child_right">
+                <a v-for="i in item.right" :href="i.url" :key="i">{{ i.name }}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-mobile">
+      <div class="logo">
+        <img :src="logoSrc" alt=""/>
+      </div>
+      <div class="tools">
+        <div class="search"></div>
+        <div class="lang">EN</div>
+        <div class="menu">
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+      </div>
+      <span class="close"></span>
+      <div class="nav_main"></div>
+      <div class="nav_l"></div>
+      <div class="nav_r"></div>
+    </div>
+  </div>
+</template>
 <style lang="scss" scoped>
 .top-header {
   @apply absolute w-full z-[9999] transition;
   .nav-normal {
-    @apply lg: w-full bg-[var(--theme-color)];
+    @apply hidden w-full bg-[var(--theme-color)];
+    @apply lg:block;
     .dock1 {
-      @apply relative 2xl:w-[var(--dock-width)] xl:w-full mx-auto xl:px-[20px] lg:px-[20px] bg-[var(--theme-color)] overflow-hidden transition;
-      // Responsive
+      @apply relative  bg-[var(--theme-color)] overflow-hidden transition;
+      @apply 2xl:w-[var(--dock-width)] xl:w-full mx-auto xl:px-[20px] lg:px-[20px];
       .inner {
         @apply h-[45px] my-0;
-        // Responsive
         .navbar {
           @apply flex h-full justify-between items-center;
           .nav_l,
@@ -434,9 +437,9 @@ onMounted(() => {
       @apply absolute w-full h-[85px] bg-transparent bg-gradient-to-b from-gray-400 to-transparent;
       .navbar {
         @apply relative h-full mx-auto;
-        // Responsive
         .inner {
-          @apply flex 2xl:w-[var(--dock-width)] xl:w-full h-full justify-between items-center mx-auto px-[30px];
+          @apply flex h-full justify-between items-center mx-auto px-[30px];
+          @apply 2xl:w-[var(--dock-width)] xl:w-full;
 
           .logo {
             @apply flex h-full justify-center items-center w-56;
@@ -448,8 +451,8 @@ onMounted(() => {
           .nav_main {
             @apply text-center text-white ;
             a {
-              @apply relative inline-block 2xl:text-xl xl:text-lg mx-6;
-              // Responsive
+              @apply relative inline-block ;
+              @apply 2xl:text-xl xl:text-lg 2xl:mx-6 xl:mx-6 lg:mx-3;
               &:after {
                 border-bottom: 2px solid var(--theme-color);
                 transition: all 0.2s ease-out 0s;
@@ -540,6 +543,66 @@ onMounted(() => {
           }
         }
       }
+    }
+  }
+
+  .nav-mobile {
+    @apply flex items-start justify-between w-[100vw] h-[100vh] bg-black bg-opacity-30;
+    .logo {
+      @apply w-[110px];
+      img {
+        @apply w-auto h-full object-contain;
+      }
+    }
+
+    .tools {
+      @apply flex justify-between items-center w-[65px];
+      .search {
+        border: 1px #fff solid;
+        @apply w-[30px] h-[30px] leading-[30px] text-[15px] text-center text-white rounded-full cursor-pointer;
+        &::before,
+        &::after {
+          @apply absolute content-[""];
+        }
+
+        &:before {
+          border: 2px #fff solid;
+          transform: translate(-57%, 33%);
+          @apply w-[16px] h-[16px] rounded-full;
+        }
+
+        &::after {
+          transform: translate(6px, 18px) rotateZ(-45deg);
+          @apply w-[2px] h-[5px] bg-white rounded-[2px];
+        }
+      }
+
+      .menu {
+        @apply flex flex-col justify-around w-[30px] h-[30px] leading-[8px] text-[15px] align-top cursor-pointer;
+        i {
+          @apply inline-block self-center h-[2px] w-[26px] bg-white;
+        }
+      }
+
+      .lang {
+        @apply hidden;
+      }
+    }
+
+    .close {
+      @apply hidden;
+    }
+
+    .nav_main {
+      @apply hidden;
+    }
+
+    .nav_l {
+      @apply hidden;
+    }
+
+    .nav_r {
+      @apply hidden;
     }
   }
 }
