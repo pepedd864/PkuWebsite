@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         // 处理图片资源
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg|ico)$/,
         type: "asset",
         parser: {
           dataUrlCondition: {
